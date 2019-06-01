@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Zuhur Prayer in Masjid Cyber 10</title>
+  <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">  
+</head>
+
+<body>
+<a-scene id="vr-scene">
+  <a-camera id="camera">
+    <a-cursor></a-cursor>
+  </a-camera>
+ 
+  <a-assets>
+    <video id="vid" src="https://cdn.glitch.com/7d81f32d-a46d-4144-9bac-7cb7ffa6d474%2Fmasjid-cyber-output-handbrake.webmhd.webm"
+    crossOrigin="anonymous"
+    autoplay="false"
+    webkit-playsinline="true"
+    playsinline="true"
+    loop="true"
+    style="display: none"></video>
+  </a-assets>
+ 
+  <!--<a-entity geometry="primitive: sphere;
+                      radius: 5000;
+                      segmentsWidth: 64;
+                      segmentsHeight: 64;"
+            material="shader: flat; src: #vid;"
+            scale="-1 1 1">
+  </a-entity>-->
+  <a-videosphere src="#vid" rotation="0 -90 0"></a-videosphere>
+</a-scene>
+  </body>
+
+</html>
